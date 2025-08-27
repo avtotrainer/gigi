@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ka">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>გიგი ცეცხლაძე — პორტფოლიო</title>
+  <meta name="description" content="გიგი ცეცხლაძის პორტფოლიო: Linux, GitHub Pages, Bash, პროექტები და საკონტაქტო ინფორმაცია." />
+  <meta name="author" content="გიგი ცეცხლაძე" />
+  <meta name="theme-color" content="#2563eb" />
+  <link rel="icon" href="assets/favicon.png" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="გიგი ცეცხლაძე — პორტფოლიო" />
+  <meta property="og:description" content="Linux · Git/GitHub · GitHub Pages · WSLg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://avtotrainer.github.io/gigi" />
+
+  <style>
+    /* ===== Theme: Light Blue / Cyan (clean, airy) ===== */
+    :root{
+      --bg:#f8fafc;        /* ღია ფონური */
+      --bg-2:#e0f2fe;      /* ცისფერი ჩრდილი */
+      --ink:#0f172a;       /* მუქი ტექსტი */
+      --muted:#475569;     /* რბილი ტექსტი */
+      --card:#ffffff;      /* ბარათის ფონი */
+      --brand:#2563eb;     /* ლურჯი */
+      --brand-2:#06b6d4;   /* ცისფერი აქცენტი */
+      --border:#dbeafe;    /* ღია ლურჯი საზღვარი */
+      --ring:#93c5fd;      /* focus outline */
+      --maxw:1080px; --r:16px;
+      --shadow:0 14px 30px rgba(2,6,23,.08);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; color:var(--ink);
+      background:
+        radial-gradient(1100px 600px at 10% -20%, var(--bg-2), transparent 60%),
+        radial-gradient(900px 500px at 110% 10%, #dbeafe, transparent 55%),
+        var(--bg);
+      font:16px/1.6 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", Arial;
+    }
+    a{color:var(--brand); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:var(--maxw); margin:0 auto; padding:0 20px}
+    .muted{color:var(--muted)}
+
+    /* Header */
+    header{position:sticky; top:0; z-index:10; backdrop-filter:blur(6px); background:#f8fafccc; border-bottom:1px solid var(--border)}
+    nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+    .logo{font-weight:900; letter-spacing:.3px}
+    .nav{display:flex; gap:16px; flex-wrap:wrap}
+    .btn{
+      display:inline-flex; align-items:center; gap:8px; cursor:pointer;
+      background:linear-gradient(135deg, var(--brand), var(--brand-2));
+      color:#fff; border:0; padding:10px 14px; border-radius:12px; font-weight:800; box-shadow:var(--shadow)
+    }
+    .btn.ghost{
+      background:#ffffff; color:var(--ink);
+      border:1px solid var(--border); box-shadow:none
+    }
+
+    /* Hero (Photo left) */
+    .hero{padding:56px 0 24px}
+    .hero-wrap{display:grid; grid-template-columns:.9fr 1.1fr; gap:26px; align-items:center}
+    .photo{
+      aspect-ratio:1/1; border-radius:20px; overflow:hidden;
+      border:2px solid var(--border); box-shadow:var(--shadow)
+    }
+    .photo img{width:100%; height:100%; object-fit:cover}
+    .card{
+      background:var(--card); border:1px solid var(--border);
+      border-radius:var(--r); padding:24px; box-shadow:var(--shadow)
+    }
+    h1{margin:0 0 10px; font:800 clamp(28px,4.2vw,48px)/1.1 ui-serif, Georgia, serif}
+    .lead{font-size:18px; color:var(--muted); margin:0 0 14px}
+    .pill{display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border-radius:999px;
+      background:#e0f2ff; color:#0c4a6e; font-weight:800}
+
+    /* Sections */
+    section{padding:28px 0}
+    section h2{margin:0 0 8px; font:800 clamp(22px,3vw,30px)/1.2 ui-serif, Georgia, serif}
+    .grid{display:grid; gap:16px}
+    .cols-3{grid-template-columns:repeat(3,1fr)}
+    .cols-2{grid-template-columns:repeat(2,1fr)}
+    @media (max-width:900px){ .hero-wrap{grid-template-columns:1fr} .cols-3,.cols-2{grid-template-columns:1fr} }
+
+    .mini{display:inline-block; padding:4px 10px; border-radius:999px; background:#dbeafe; color:#1e3a8a; font-size:12px}
+    .card h3{margin:0}
+
+    /* Footer */
+    footer{padding:34px 0 48px; color:#64748b; font-size:14px}
+    .sep{height:1px; background:var(--border); margin:10px 0 18px}
+
+    /* Forms */
+    form{display:grid; gap:10px}
+    input, textarea{
+      padding:10px 12px; border-radius:12px; border:1px solid var(--border); background:#ffffff; color:var(--ink)
+    }
+    input:focus, textarea:focus, .btn:focus{outline:3px solid var(--ring); outline-offset:2px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav aria-label="მთავარი ნავიგაცია">
+        <div class="logo">🌊 გიგი ცეცხლაძე <span class="muted">· პორტფოლიო</span></div>
+        <div class="nav">
+          <a href="#about">ჩემ შესახებ</a>
+          <a href="#projects">პროექტები</a>
+          <a href="#skills">უნარები</a>
+          <a href="#contact">კონტაქტი</a>
+          <a class="btn ghost" href="mailto:gigi240@din.ge">✉️ წერილი</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO (photo left) -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-wrap">
+          <figure class="photo">
+            <img src="assets/me.jpg" alt="გიგი ცეცხლაძე — პროფილის ფოტო">
+          </figure>
+
+          <div class="card">
+            <span class="pill">Linux · Git · GitHub Pages · WSLg</span>
+            <h1>გამარჯობა, მე ვარ გიგი ცეცხლაძე</h1>
+            <p class="lead">
+              საზაფხულო სკოლის დროს **დავაყენე** და **განვაახლე** Manjaro Linux, ვისწავლე ტერმინალი, Git/GitHub
+              და GitHub Pages. **ავაქვეყნე** სტატიკური საიტი, Bash სკრიპტებით მცირე ავტომატიზაციებიც გავაკეთე,
+              ხოლო Windows-ში **WSLg ავამუშავე**, რომ Linux აპები გრაფიკულად გამეშვა.
+            </p>
+            <div style="display:flex; gap:10px; flex-wrap:wrap">
+              <a class="btn" href="mailto:gigi240@din.ge">დამიკავშირდი</a>
+              <a class="btn ghost" href="https://avtotrainer.github.io/gigi" target="_blank" rel="noopener">🔗 ჩემი საიტი</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <h2>ჩემ შესახებ</h2>
+        <p class="muted">
+          ტექნოლოგიებში აქტიურად ჩავერთე საზაფხულო სკოლის დროს. სწავლების დასაწყისში ყველა კომპიუტერზე წინასწარ დაყენებული იყო Manjaro Linux,
+          დასრულების შემდეგ კი გარემო კვლავ გადავიდა Windows-ზე, სადაც **WSL/WSLg ავამუშავე**.
+          პროგრამის განმავლობაში მე:
+        </p>
+        <ul class="muted">
+          <li>**Manjaro Linux დავაყენე** და განვაახლე; GNOME ინტერფეისი გამოვიყენე.</li>
+          <li>ტერმინალში ვიმუშავე საბაზო ბრძანებებით: <code>pwd</code>, <code>ls</code>, <code>cd</code>, <code>mkdir</code>, <code>touch</code>, <code>cat</code>, <code>nano</code>, <code>rm</code>.</li>
+          <li>Google Workspace (Docs, Sheets, Slides), ასევე Chat/Meet ვიყენე კომუნიკაციისთვის (ჯგუფი: <strong>ira25@din.ge</strong>).</li>
+          <li>Git/GitHub — ვერსიების კონტროლი, რეპოზიტორების მართვა, Pull/Push გუნდურად.</li>
+          <li>**GitHub Pages-ზე ავაქვეყნე** საკუთარი სტატიკური საიტი.</li>
